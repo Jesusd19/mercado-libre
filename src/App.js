@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import "./styles/index.scss";
+
 import Home from "./page/home";
 import SearchResult from "./page/searchResult";
 import Product from "./page/product";
@@ -13,10 +15,10 @@ const App = () => {
           <Home />
         </Route>
         <Route path="/items/:id">
-          <SearchResult />
+          <Product />
         </Route>
         <Route path="/items">
-          <Product />
+          <SearchResult />
         </Route>
       </Switch>
     </Router>
