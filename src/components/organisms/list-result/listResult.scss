@@ -12,12 +12,21 @@
   display: flex;
   padding: 16px 0 16px 16px;
   background-color: $white;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+
   &__img {
     min-width: 180px;
     min-height: 180px;
-    background-color: blueviolet;
+    // background-color: blueviolet;
     border-radius: 4px;
     margin-right: 16px;
+    img {
+      width: 100%;
+    }
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__info {
     width: 70%;
@@ -36,9 +45,16 @@
         font-size: 12px;
       }
     }
-    &__title, &__stock {
-        margin: 0;
-        font-size: 18px;
+
+    &__title {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__title,
+    &__stock {
+      margin: 0;
+      font-size: 18px;
     }
   }
 }
