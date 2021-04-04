@@ -1,21 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./productDetails.scss";
 
-import { getProduct } from "../../../services/products";
-const ProductDetails = () => {
-  const [product, setProduct] = useState({});
 
-  const getProductDetails = async () => {
-    const word = window.location.pathname.split("/");
-    const produc = await getProduct(word[word.length - 1]);
-    // console.log(produc.data.item);
-    setProduct(produc.data.item);
-  };
-
-  useEffect(() => {
-    getProductDetails();
-  }, []);
-
+const ProductDetails = (props) => {
+  const { product } = props
   return (
     <div className="o-product-details">
       <div className="o-product-details__content">

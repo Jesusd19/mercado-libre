@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import "./header.scss";
-
 import Logo from "../../../assets/image/Logo_ML.png";
-import icSearch from "../../../assets/image/ic_Search.png";
+
+import Searcher from "../../atoms/searcher/searcher";
 
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [wordSearch, setWordSearch] = useState("");
+  
 
-  const handleclick = () => {
+  const handleclick = (wordSearch) => {
+    console.log("ENTRO")
       if (wordSearch !== "") {
           window.location.href = `/items?search=${wordSearch}`;          
       }
@@ -21,23 +22,7 @@ const Header = () => {
         <Link to="/">
           <img src={Logo} alt="Mercado libre" className="o-header__logo" />
         </Link>
-        <div className="o-header__search">
-          <input
-            placeholder="Nunca dejes de buscar"
-            className="o-header__search__input"
-            value={wordSearch}
-            onChange={(e) => setWordSearch(e.target.value)}
-            onKeyDown={e => e.key === "Enter" && handleclick()}
-          />
-          <div className="o-header__search__content">
-            <img
-              src={icSearch}
-              alt="Buscar"
-              className="o-header__search__content__btn"
-              onClick={handleclick}
-            />
-          </div>
-        </div>
+        <Searcher actionClick={(word) => handleclick(word)} />
       </div>
     </section>
   );

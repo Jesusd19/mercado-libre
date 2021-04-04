@@ -1,0 +1,53 @@
+@import "../../../styles/variables.scss";
+
+.a-card__product {
+    width: 100%;
+    display: flex;
+    padding: 16px 0 16px 16px;
+    background-color: $white;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+  
+    &__img {
+      min-width: 180px;
+      min-height: 180px;
+      // background-color: blueviolet;
+      border-radius: 4px;
+      margin-right: 16px;
+      img {
+        width: 100%;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__info {
+      width: 70%;
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+        padding-top: 15px;
+        width: 100%;
+  
+        &__price {
+          margin: 0;
+          font-size: 24px;
+        }
+        &__business {
+          font-size: 12px;
+        }
+      }
+  
+      &__title {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &__title,
+      &__stock {
+        margin: 0;
+        font-size: 18px;
+      }
+    }
+  }

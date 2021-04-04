@@ -1,0 +1,17 @@
+@import "../../../styles/variables.scss";
+
+.miga-de-pan {
+    display: flex;
+    justify-content: center;
+    .a-breadcrumb {
+        width: 80%;
+        display: flex;
+        margin: 0;
+        padding: 16px 0;
+        li {
+            list-style: none;
+            margin-right: 4px;
+            font-size: 14;
+        }
+    }
+}
