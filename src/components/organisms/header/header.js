@@ -7,10 +7,7 @@ import Searcher from "../../atoms/searcher/searcher";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  
-
   const handleclick = (wordSearch) => {
-    console.log("ENTRO")
       if (wordSearch !== "") {
           window.location.href = `/items?search=${wordSearch}`;          
       }
